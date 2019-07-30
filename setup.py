@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 
 import setuptools
-from sphinxcontrib import youtube as pkg
+from sphinxcontrib import yt as pkg
 
 pkgname = pkg.__name__
 
@@ -14,7 +14,7 @@ setuptools.setup(
         ],
     author=pkg.__author__,
     license=pkg.__license__,
-    url='https://github.com/shomah4a/sphinxcontrib.youtube',
+    url='https://github.com/divi255/sphinxcontrib.youtube',
     description='''embedding gist to sphinx''',
     long_description=pkg.__doc__,
     namespace_packages=['sphinxcontrib'],

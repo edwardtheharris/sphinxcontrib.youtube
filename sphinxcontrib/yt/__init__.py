@@ -8,7 +8,7 @@ First of all, add `sphinxcontrib.youtube` to sphinx extension list in conf.py
 
 .. code-block:: python
 
-   extensions = ['sphinxcontrib.youtube']
+   extensions = ['sphinxcontrib.yt']
 
 
 then use `youtube` directive.
