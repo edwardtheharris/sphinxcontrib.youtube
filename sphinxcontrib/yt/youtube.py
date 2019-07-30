@@ -8,14 +8,13 @@ try:
 except ImportError:
     import urllib.parse as urlparse
 
-
 from docutils import nodes
 from docutils.parsers import rst
 
 
-
 class youtube(nodes.General, nodes.Element):
-    pass
+
+    video_id = None
 
 
 def is_url(s):
@@ -35,7 +34,8 @@ def visit(self, node):
 
     video_id = node.video_id
     url = u'https://www.youtube.com/embed/{0}'.format(video_id)
-    tag = u'''<iframe width="640" height="360" style="margin-bottom: 25px" src="{0}" frameborder="0" allowfullscreen="1">&nbsp;</iframe>'''.format(url)
+    tag = u'''<iframe width="640" height="360" style="margin-bottom: 25px" src="{0}" frameborder="0" allowfullscreen="1">&nbsp;</iframe>'''.format(
+        url)
 
     self.body.append(tag)
 
@@ -54,7 +54,6 @@ class YoutubeDirective(rst.Directive):
     optional_arguments = 0
     final_argument_whitespace = False
     option_spec = {}
-
 
     def run(self):
 
