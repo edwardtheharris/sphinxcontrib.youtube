@@ -30,9 +30,9 @@ finally, build your sphinx project.
 
 '''
 
-__version__ = '0.2.2'
-__author__ = '@shomah4a'
-__license__ = 'LGPLv3'
+__version__ = '0.2.3'
+__author__ = 'xandertheharris@gmail.com'
+__license__ = 'Unlicense'
 
 
 
