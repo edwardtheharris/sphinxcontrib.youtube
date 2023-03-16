@@ -18,7 +18,7 @@
     "default": {
         "sphinxcontrib-yt": {
             "git": "https://github.com/edwardtheharris/sphinxcontrib.youtube.git",
-            "ref": "e1bbd145ab51c5f6b7c6812c0513fe7e460e62b3"
+            "ref": "1cad913a29c5820e323617efb9e44be056cb6685"
         }
     },
     "develop": {}
