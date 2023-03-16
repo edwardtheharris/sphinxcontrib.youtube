@@ -9,7 +9,7 @@ description = "Sphinxcontrib Youtube"
 dynamic = ["version", "readme"]
 keywords = ["sphinx", "video", "youtube"]
 license = {file = "license.md"}
-name = "yt"
+name = "sphinxcontrib-yt"
 requires-python = ">=3.7"
 
 [tool.setuptools.dynamic]
