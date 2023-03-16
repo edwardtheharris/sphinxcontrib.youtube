@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [{name = "Xander Harris", email = "xandertheharris@gmail.com"}, {name = "@shomah4a"}]
+dependencies = ["sphinx", "delta", "google-api-python-client", "nbformat", "pydantic", "pyspark"]
+description = "Sphinxcontrib Youtube"
+dynamic = ["version", "readme"]
+keywords = ["sphinx", "video", "youtube"]
+license = {file = "license.md"}
+name = "yt"
+requires-python = ">=3.7"
+
+[tool.setuptools.dynamic]
+readme = {file = ["readme.md"]}
+version = {attr = "sphinxcontrib.yt.__version__"}
+
+
+
