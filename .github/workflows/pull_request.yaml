@@ -1,0 +1,40 @@
+name: Pull Requests
+on:
+  pull_request:
+
+jobs:
+  assign_pr:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/github-script@main
+        id: assign-issue
+        with:
+          script: |
+            github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              issue_number: context.issue.number,
+              repo: context.repo.repo,
+              assignees: [
+                context.issue.user,
+                context.actor,
+                context.triggering_actor
+              ]
+            })
+      - run: echo "${{ steps.assign-issue.outputs }}"
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/github-script@main
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["major"]
+            })
