@@ -7,6 +7,16 @@ verify_ssl = true
 
 [packages]
 sphinxcontrib-yt = {git = "https://github.com/edwardtheharris/sphinxcontrib.youtube.git"}
+docutils = "*"
 
-[requires]
-python_version = "3.7"
+[semver]
+jupyter = "*"
+semver = "*"
+
+[lint]
+pylint = "*"
+autopep8 = "*"
+flake8 = "*"
+
+[test]
+pytest = "*"
