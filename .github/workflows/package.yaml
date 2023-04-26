@@ -28,4 +28,5 @@ jobs:
         python -m pip install --upgrade pip pipenv
         PIPENV_VENV_IN_PROJECT=1 PIPENV_VERBOSITY=10 pipenv install --categories test
         PIPENV_VENV_IN_PROJECT=1 PIPENV_VERBOSITY=10 pipenv install --system --categories test
+        PIPENV_VENV_IN_PROJECT=1 PIPENV_VERBOSITY=10 pipenv install --system --categories packages
         pytest
