@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
-u'''
+"""Initialize the Sphinx Contrib yt module.
+
 embedding youtube video to sphinx
 
 usage:
@@ -28,7 +29,7 @@ finally, build your sphinx project.
 
    $ make html
 
-'''
+"""
 from pathlib import Path
 from . import youtube
 
