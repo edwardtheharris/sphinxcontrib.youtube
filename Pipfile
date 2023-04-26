@@ -11,3 +11,6 @@ sphinxcontrib-yt = {git = "https://github.com/edwardtheharris/sphinxcontrib.yout
 [semver]
 jupyter = "*"
 semver = "*"
+
+[lint]
+pylint = "*"
