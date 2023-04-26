@@ -6,7 +6,7 @@ verify_ssl = true
 [[source]]
 url = "wheels/sphinx/"
 verify_ssl = true
-name = ""
+name = "local"
 
 [dev-packages]
 
