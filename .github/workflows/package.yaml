@@ -26,5 +26,4 @@ jobs:
     - run: python -m pip install --upgrade pip pipenv
     - run: PIPENV_VENV_IN_PROJECT=1 PIPENV_VERBOSITY=10 pipenv install --categories test
     - run: PIPENV_VENV_IN_PROJECT=1 PIPENV_VERBOSITY=10 pipenv install --system --categories test
-    - run: PIPENV_VENV_IN_PROJECT=1 PIPENV_VERBOSITY=10 pipenv install --system --categories lint
-    - run: PYTHONPATH=src pytest
+    - run: pytest

@@ -16,5 +16,7 @@ requires-python = ">=3.7"
 readme = {file = ["readme.md"]}
 version = {attr = "sphinxcontrib.yt.__version__"}
 
-
-
+[tool.pytest.ini_options]
+pythonpath = [
+    "src"
+]
