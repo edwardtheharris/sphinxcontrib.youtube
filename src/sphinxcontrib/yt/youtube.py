@@ -11,6 +11,10 @@ class YouTube(nodes.General, nodes.Element):
 
     video_id = None
 
+def youtube():
+    """Return a YouTube object."""
+    return YouTube()
+
 
 def is_url(url_str):
     """Check that a string is a url."""
