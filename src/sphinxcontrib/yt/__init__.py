@@ -28,14 +28,9 @@ finally, build your sphinx project.
 .. code-block:: sh
 
    $ make html
-<<<<<<< Updated upstream
-
-'''
-=======
 """
 from pathlib import Path
 from . import youtube
->>>>>>> Stashed changes
 
 __version__ = '0.2.3'
 __author__ = 'xandertheharris@gmail.com'
