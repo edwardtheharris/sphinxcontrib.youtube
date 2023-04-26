@@ -37,7 +37,9 @@ repo_root = Path(f'{__file__}').parent.parent.parent
 with Path(f'{repo_root}/version').open('r', encoding='utf-8') as v_fh:
     __version__ = v_fh.read()
 __author__ = 'xandertheharris@gmail.com'
-__license__ = 'Unlicense'
+
+with Path(f'{repo_root}/license.md').open('r', encoding='utf-8') as v_fh:
+    __license__ = v_fh.read()
 
 
 def setup(app):
