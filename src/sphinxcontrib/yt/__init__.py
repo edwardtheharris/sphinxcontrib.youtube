@@ -1,4 +1,4 @@
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 u'''
 embedding youtube video to sphinx
 
@@ -34,15 +34,13 @@ from . import youtube
 
 repo_root = Path(f'{__file__}').parent.parent.parent
 with Path(f'{repo_root}/version').open('r', encoding='utf-8') as v_fh:
-   __version__ = v_fh.read()
+    __version__ = v_fh.read()
 __author__ = 'xandertheharris@gmail.com'
 __license__ = 'Unlicense'
 
 
-
 def setup(app):
-
-
+    """Set up the Sphinx application."""
     app.add_node(youtube.youtube,
                  html=(youtube.visit, youtube.depart))
     app.add_directive('youtube', youtube.YoutubeDirective)
