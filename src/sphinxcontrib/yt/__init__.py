@@ -41,7 +41,7 @@ __license__ = 'Unlicense'
 
 def setup(app):
     """Set up the Sphinx application."""
-    app.add_node(youtube.youtube,
+    app.add_node(youtube.YouTube,
                  html=(youtube.visit, youtube.depart))
     app.add_directive('youtube', youtube.YoutubeDirective)
     return {'parallel_read_safe': True}
