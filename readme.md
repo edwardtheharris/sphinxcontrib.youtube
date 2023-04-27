@@ -1,6 +1,10 @@
 ---
 abstract: This package allows inserting YouTube videos into Sphinx documents.
-authors: xander.harris@databricks.com
+authors:
+  - xander.harris@databricks.com
+file_format: mystnb
+kernelspec:
+  name: python3
 ---
 
 # Sphinx-Contrib YouTube
@@ -62,4 +66,15 @@ semver
 
 ```{eval-rst}
 .. automodule:: src
+```
+
+```{code-cell} ipython3
+---
+mystnb:
+  number_source_lines: true
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+print('hello world')
 ```

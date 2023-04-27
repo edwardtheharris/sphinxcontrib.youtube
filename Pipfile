@@ -13,11 +13,17 @@ url = "wheels/lint/"
 verify_ssl = true
 name = ""
 
+[[source]]
+url = "wheels/"
+verify_ssl = true
+name = ""
+
 [dev-packages]
 
 [packages]
 docutils = "*"
 "sphinxcontrib.yt" = {editable = true, path = "."}
+nbformat = "*"
 
 [semver]
 jupyter = "*"
