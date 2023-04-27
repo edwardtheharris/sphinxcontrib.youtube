@@ -16,9 +16,10 @@ author = 'Xander Harris'
 copyright = '2023, The Internet'
 exclude_patterns = [
     '_build',
+    '.DS_Store',
+    '.pytest_cache',
+    '.venv/*',
     'Thumbs.db',
-    '.DS_Store'
-    '.venv/*'
     ]
 #: -- General configuration ---------------------------------------------------
 
@@ -28,7 +29,7 @@ with Path('version').open('r', encoding='utf-8') as v_fh:
 #: [general configuration](https://tinyurl.com/4vys37ez)
 extensions = [
     "myst_parser",
-    # "myst_nb",
+    "myst_nb",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.githubpages"
@@ -37,7 +38,7 @@ extensions = [
 html_theme = 'alabaster'
 #: [html options](https://tinyurl.com/35zdr2a7)
 html_static_path = ['_static']
-
+nb_render_markdown_format = "myst"
 project = 'Sphinx Contrib YouTube'
 root_doc = 'readme'
 source_suffix = {
