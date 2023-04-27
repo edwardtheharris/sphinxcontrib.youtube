@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 authors = [{name = "Xander Harris", email = "xandertheharris@gmail.com"}, {name = "@shomah4a"}]
-dependencies = ["sphinx",]
+dependencies = ["docutils", "sphinx",]
 description = "Sphinxcontrib Youtube"
 dynamic = ["version", "readme"]
 keywords = ["sphinx", "video", "youtube"]

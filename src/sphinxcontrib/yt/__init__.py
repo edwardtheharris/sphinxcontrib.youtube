@@ -32,7 +32,7 @@ finally, build your sphinx project.
 from pathlib import Path
 from . import youtube
 
-repo_root = Path(f"{__file__}").parent.parent.parent
+repo_root = Path(f"{__file__}").parent.parent.parent.parent
 with Path(f"{repo_root}/version").open("r", encoding="utf-8") as v_fh:
     __version__ = v_fh.read()
 __author__ = "xandertheharris@gmail.com"
@@ -42,7 +42,10 @@ with Path(f"{repo_root}/license.md").open("r", encoding="utf-8") as v_fh:
 
 
 def setup(app):
-    """Set up the Sphinx application."""
+    """Set up the Sphinx application.
+
+    :param app: An instance of the Sphinx application
+    """
     app.add_node(youtube.YouTube, html=(youtube.visit, youtube.depart))
     app.add_directive("youtube", youtube.YoutubeDirective)
     return {

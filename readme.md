@@ -35,16 +35,19 @@ as an editable package like this.
    a few handy wheels.
 
     ```{code-block} shell
+    :caption: use any version of python that's supported
+
     python3.10 -m pip install -U pip pipenv
     python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-parser
     python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-nb
     python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx sphinx
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/youtube .
     ```
 
 4. Install Sphinx into your new virtual environment.
 
-    ```shell
-    pip3 install sphinxcontrib.yt
+    ```{code-block} shell
+    python3.10 -m pipenv install -i wheels/youtube sphinxcontrib-yt
     ```
 
 ```{toctree}
@@ -53,4 +56,10 @@ contributing
 license
 security
 semver
+```
+
+## API Reference
+
+```{eval-rst}
+.. automodule:: src
 ```

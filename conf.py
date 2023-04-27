@@ -20,7 +20,7 @@ exclude_patterns = [
     '.pytest_cache',
     '.venv/*',
     'Thumbs.db',
-    ]
+]
 #: -- General configuration ---------------------------------------------------
 
 with Path('version').open('r', encoding='utf-8') as v_fh:

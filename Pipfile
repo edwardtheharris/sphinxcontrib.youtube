@@ -16,22 +16,23 @@ name = ""
 [dev-packages]
 
 [packages]
-sphinxcontrib-yt = {git = "https://github.com/edwardtheharris/sphinxcontrib.youtube.git"}
 docutils = "*"
+"sphinxcontrib.yt" = {editable = true, path = "."}
 
 [semver]
 jupyter = "*"
 semver = "*"
 
 [lint]
-pylint = "*"
 autopep8 = "*"
-flake8 = "*"
 black = "*"
+flake8 = "*"
+pydocstyle = "*"
+pylint = "*"
 
 [docs]
 myst-nb = "*"
 myst-parser = "*"
+pydata-sphinx-theme = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
-pydata-sphinx-theme = "*"
