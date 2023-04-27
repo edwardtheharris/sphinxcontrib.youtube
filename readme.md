@@ -31,20 +31,22 @@ as an editable package like this.
     cd "$src_dir"
     ```
 
-3. Create your virtual environment.
+3. Create your virtual environment, perhaps by creating some local copies of
+   a few handy wheels.
 
     ```{code-block} shell
     python3.10 -m pip install -U pip pipenv
-    python3.10 -m pipenv --python 3.10 run
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-parser
     ```
 
 4. Install the project in that environment.
 
-```shell
-pip3 install sphinxcontrib.yt
-```
+    ```shell
+    pip3 install sphinxcontrib.yt
+    ```
 
 ```{toctree}
+changelog
 contributing
 license
 security
