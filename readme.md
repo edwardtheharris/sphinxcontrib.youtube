@@ -37,9 +37,11 @@ as an editable package like this.
     ```{code-block} shell
     python3.10 -m pip install -U pip pipenv
     python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-parser
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-nb
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx sphinx
     ```
 
-4. Install the project in that environment.
+4. Install Sphinx into your new virtual environment.
 
     ```shell
     pip3 install sphinxcontrib.yt
