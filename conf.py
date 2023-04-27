@@ -28,20 +28,23 @@ with Path('version').open('r', encoding='utf-8') as v_fh:
 
 #: [general configuration](https://tinyurl.com/4vys37ez)
 extensions = [
-    "myst_parser",
     "myst_nb",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-    "sphinx.ext.githubpages"
+    "sphinx.ext.coverage",
+    "sphinx.ext.duration",
+    "sphinx.ext.githubpages",
+    "sphinx.ext.graphviz"
 ]
 #: -- Options for HTML output -------------------------------------------------
-html_theme = 'alabaster'
+html_theme = 'pydata_sphinx_theme'
 #: [html options](https://tinyurl.com/35zdr2a7)
 html_static_path = ['_static']
 nb_render_markdown_format = "myst"
 project = 'Sphinx Contrib YouTube'
 root_doc = 'readme'
 source_suffix = {
-    '.md': 'markdown',
+    '.ipynb': 'myst-nb',
+    '.md': 'myst-nb',
 }
 templates_path = ['_templates']

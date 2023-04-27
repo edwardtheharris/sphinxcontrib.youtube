@@ -33,6 +33,5 @@ black = "*"
 myst-nb = "*"
 myst-parser = "*"
 sphinx = "*"
-
-[sphinx]
 sphinx-autobuild = "*"
+pydata-sphinx-theme = "*"
