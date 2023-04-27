@@ -1,4 +1,4 @@
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 """Sphinx Contrib YouTube package.
 
 embedding youtube video to sphinx
@@ -32,22 +32,21 @@ finally, build your sphinx project.
 from pathlib import Path
 from . import youtube
 
-repo_root = Path(f'{__file__}').parent.parent.parent
-with Path(f'{repo_root}/version').open('r', encoding='utf-8') as v_fh:
+repo_root = Path(f"{__file__}").parent.parent.parent
+with Path(f"{repo_root}/version").open("r", encoding="utf-8") as v_fh:
     __version__ = v_fh.read()
-__author__ = 'xandertheharris@gmail.com'
+__author__ = "xandertheharris@gmail.com"
 
-with Path(f'{repo_root}/license.md').open('r', encoding='utf-8') as v_fh:
+with Path(f"{repo_root}/license.md").open("r", encoding="utf-8") as v_fh:
     __license__ = v_fh.read()
 
 
 def setup(app):
     """Set up the Sphinx application."""
-    app.add_node(youtube.YouTube,
-                 html=(youtube.visit, youtube.depart))
-    app.add_directive('youtube', youtube.YoutubeDirective)
+    app.add_node(youtube.YouTube, html=(youtube.visit, youtube.depart))
+    app.add_directive("youtube", youtube.YoutubeDirective)
     return {
-        'parallel_write_safe': True,
-        'parallel_read_safe': True,
-        'version': __version__
+        "parallel_write_safe": True,
+        "parallel_read_safe": True,
+        "version": __version__,
     }

@@ -8,6 +8,11 @@ url = "wheels/sphinx/"
 verify_ssl = true
 name = ""
 
+[[source]]
+url = "wheels/lint/"
+verify_ssl = true
+name = ""
+
 [dev-packages]
 
 [packages]
@@ -22,6 +27,7 @@ semver = "*"
 pylint = "*"
 autopep8 = "*"
 flake8 = "*"
+black = "*"
 
 [docs]
 myst-nb = "*"

@@ -1,4 +1,4 @@
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 """YouTube module for Sphinx Contrib YouTube extension."""
 import urllib.parse as urlparse
 
@@ -11,6 +11,7 @@ class YouTube(nodes.General, nodes.Element):
 
     video_id = None
 
+
 def youtube():
     """Return a YouTube object."""
     return YouTube()
@@ -18,7 +19,7 @@ def youtube():
 
 def is_url(url_str):
     """Check that a string is a url."""
-    if url_str.startswith('http://') or url_str.startswith('https://'):
+    if url_str.startswith("http://") or url_str.startswith("https://"):
         return True
 
     return False
@@ -26,7 +27,7 @@ def is_url(url_str):
 
 def get_video_id(url):
     """Get the url of a video."""
-    return urlparse.parse_qs(urlparse.urlparse(url).query)['v'][0]
+    return urlparse.parse_qs(urlparse.urlparse(url).query)["v"][0]
 
 
 def visit(self, node):
@@ -35,9 +36,11 @@ def visit(self, node):
     :param node: The node being visited
     """
     video_id = node.video_id
-    url = f'https://www.youtube.com/embed/{video_id}'
-    tag = ('<iframe width="640" height="360" style="margin-bottom: 25px"'
-           f' src="{url}" frameborder="0" allowfullscreen="1">&nbsp;</iframe>')
+    url = f"https://www.youtube.com/embed/{video_id}"
+    tag = (
+        '<iframe width="640" height="360" style="margin-bottom: 25px"'
+        f' src="{url}" frameborder="0" allowfullscreen="1">&nbsp;</iframe>'
+    )
     self.body.append(tag)
 
 
@@ -51,7 +54,7 @@ class YoutubeDirective(rst.Directive):
     """Instantiate Youtube directives."""
 
     #: name of the directive
-    name = 'youtube'
+    name = "youtube"
     #: class of the node
     node_class = YouTube
     #: node has no content
