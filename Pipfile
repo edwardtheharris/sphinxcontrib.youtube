@@ -22,7 +22,7 @@ name = ""
 
 [packages]
 docutils = "*"
-"sphinxcontrib.yt" = {editable = true, path = "."}
+sphinxcontrib-yt = {editable = true, path = "."}
 nbformat = "*"
 
 [semver]

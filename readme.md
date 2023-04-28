@@ -57,7 +57,6 @@ as an editable package like this.
 ```{toctree}
 CHANGELOG
 contributing
-index
 license
 security
 semver

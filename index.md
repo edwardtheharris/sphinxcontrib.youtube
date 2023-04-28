@@ -22,7 +22,7 @@ license
 md/modules
 readme
 security
-semver
+semver-jupyter
 ```
 
 Hopefully it's useful to someone other than the dirty thief that posted this.

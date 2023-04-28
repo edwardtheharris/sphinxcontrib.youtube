@@ -13,7 +13,9 @@ For the full list of built-in configuration values, see the
 from pathlib import Path
 import sys
 
-sys.path.insert(0, Path('./src'))
+sys.path.append('.src/')
+sys.path.append('.')
+print(sys.path)
 
 author = 'Xander Harris'
 copyright = '2023, The Internet'
@@ -46,7 +48,7 @@ html_static_path = ['_static']
 project = 'Sphinx Contrib YouTube'
 root_doc = 'index'
 source_suffix = {
-    '.md': 'markdown',
+    '.md': 'myst-nb',
     '.ipynb': 'myst-nb',
     '.myst': 'myst-nb',
 }
