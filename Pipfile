@@ -3,20 +3,44 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[[source]]
+url = "wheels/sphinx/"
+verify_ssl = true
+name = ""
+
+[[source]]
+url = "wheels/lint/"
+verify_ssl = true
+name = ""
+
+[[source]]
+url = "wheels/"
+verify_ssl = true
+name = ""
+
 [dev-packages]
 
 [packages]
-sphinxcontrib-yt = {git = "https://github.com/edwardtheharris/sphinxcontrib.youtube.git"}
 docutils = "*"
+sphinxcontrib-yt = {editable = true, path = "."}
+nbformat = "*"
+"sphinxcontrib.yt" = {editable = true, path = "."}
 
 [semver]
 jupyter = "*"
 semver = "*"
 
 [lint]
-pylint = "*"
 autopep8 = "*"
+black = "*"
 flake8 = "*"
+pydocstyle = "*"
+pylint = "*"
 
-[test]
-pytest = "*"
+[docs]
+myst-nb = "*"
+myst-parser = "*"
+pydata-sphinx-theme = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+jupytext = "*"

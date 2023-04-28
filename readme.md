@@ -1,6 +1,10 @@
 ---
 abstract: This package allows inserting YouTube videos into Sphinx documents.
-authors: xander.harris@databricks.com
+authors:
+  - xander.harris@databricks.com
+file_format: mystnb
+kernelspec:
+  name: python3
 ---
 
 # Sphinx-Contrib YouTube
@@ -31,21 +35,44 @@ as an editable package like this.
     cd "$src_dir"
     ```
 
-3. Create your virtual environment.
+3. Create your virtual environment, perhaps by creating some local copies of
+   a few handy wheels.
 
     ```{code-block} shell
+    :caption: use any version of python that's supported
+
     python3.10 -m pip install -U pip pipenv
-    python3.10 -m pipenv --python 3.10 run
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-parser
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx myst-nb
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/sphinx sphinx
+    python3.10 -m pipenv --python 3.10 run pip wheel -w wheels/sphinx -f wheels/youtube .
     ```
 
-4. Install the project in that environment.
+4. Install Sphinx into your new virtual environment.
 
-```shell
-pip3 install sphinxcontrib.yt
-```
+    ```{code-block} shell
+    python3.10 -m pipenv install -i wheels/youtube sphinxcontrib-yt
+    ```
 
 ```{toctree}
+CHANGELOG
 contributing
 license
 security
+semver
+```
+
+```{eval-rst}
+.. automodule:: src
+```
+
+```{code-cell} ipython3
+---
+mystnb:
+  number_source_lines: true
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+print('hello world')
 ```
