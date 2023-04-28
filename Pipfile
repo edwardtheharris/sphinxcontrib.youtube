@@ -24,6 +24,7 @@ name = ""
 docutils = "*"
 sphinxcontrib-yt = {editable = true, path = "."}
 nbformat = "*"
+"sphinxcontrib.yt" = {editable = true, path = "."}
 
 [semver]
 jupyter = "*"
