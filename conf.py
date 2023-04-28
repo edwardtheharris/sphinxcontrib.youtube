@@ -16,9 +16,6 @@ import sys
 sys.path.append('.src/')
 sys.path.append('.')
 
-from sphinxcontrib import yt
-print(sys.path)
-
 author = 'Xander Harris'
 copyright = '2023, The Internet'
 exclude_patterns = [
