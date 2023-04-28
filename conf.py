@@ -11,6 +11,9 @@ For the full list of built-in configuration values, see the
 [Project information](https://tinyurl.com/255t89n7)
 """
 from pathlib import Path
+import sys
+
+sys.path.insert(0, Path('./src'))
 
 author = 'Xander Harris'
 copyright = '2023, The Internet'
