@@ -1,6 +1,6 @@
 ---
 abstract: This is the api reference for the youtube package.
-authors: @edwardtheharris
+authors: xander.harris@databricks.com
 ---
 
 # sphinxcontrib package

@@ -40,13 +40,11 @@ extensions = [
 html_theme = 'pydata_sphinx_theme'
 #: [html options](https://tinyurl.com/35zdr2a7)
 html_static_path = ['_static']
-nb_render_markdown_format = "myst"
-nb_execution_mode = "auto"
-nb_execution_in_temp = True
 project = 'Sphinx Contrib YouTube'
 root_doc = 'index'
 source_suffix = {
+    '.md': 'markdown',
     '.ipynb': 'myst-nb',
-    '.md': 'myst-nb',
+    '.myst': 'myst-nb',
 }
 templates_path = ['_templates']
