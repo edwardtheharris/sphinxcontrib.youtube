@@ -18,7 +18,7 @@ def youtube():
 
 def is_url(url_str):
     """Check that a string is a url."""
-    if url_str.startswith('http://') or url_str.startswith('https://'):
+    if url_str.startswith(('http://', 'https://')):
         return True
 
     return False
